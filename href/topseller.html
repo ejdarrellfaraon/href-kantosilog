@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Kanto Silog-Dashboard</title>
+
+	<link rel="stylesheet" href="../mdb/bootstrap.min.css">
+	<link rel="stylesheet" href="../mdb/mdb.min.css">
+	<link rel="stylesheet" href="../mdb/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../mdb/mystyle2.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+	<link rel="stylesheet" href="../mdb/mystyle3.css">
+	<link rel="icon" href="../images/Logo.png">
+</head>
+<body class="hidden-sn grey-skin">
+	<div class="modal fade" id="newfoodlist" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<h4 class="modal-title w-100 font-weight-bold">Food Information</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body mx-3">
+				<div class="md-form mb-4">
+					<i class="fa fa-user prefix grey-text"></i>
+					<input type="text" id="foodname" class="form-control validate">
+					<label for="form3">Food Name</label>
+				</div>
+
+				<div class="md-form mb-4">
+					<i class="fa fa-shopping-basket prefix grey-text"></i>
+					<input type="email" id="foodstocks" class="form-control validate">
+					<label for="form3">Food Stocks</label>
+				</div>
+
+				<div class="md-form mb-4">
+					<i class="fas fa-dollar-sign prefix grey-text"></i>
+					<input type="email" id="foodprice" class="form-control validate">
+					<label for="form3">Food Price</label>
+				</div>
+
+				<div class="md-form mb-4">
+					<i class="fa fa-archive prefix grey-text"></i>
+					<input type="email" id="foodcateg" value="Food" class="form-control validate" disabled="">
+					<label for="form3">Food Category</label>
+				</div>
+			</div>
+			<div class="modal-footer d-flex justify-content-center">
+				<button type="submit" class="btn btn-primary" onclick="addtoList()">Submit <i class="fa fa-paper-plane-o ml-1"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Double navigation-->
+<header>
+	<!-- Navbar -->
+		<nav class="navbar">
+			<a class="navbar-brand" href="#" style="padding-top: -50px"></a>
+		</nav>
+</header>
+<!--/.Double navigation-->
+
+		<!-- nav start -->
+		<br>
+		<ul class="nav nav-tabs nav-justified md-tabs" id="myTabJust" role="tablist" style="background-color:#314755">
+		<li class="nav-item">
+			<a class="nav-link active" id="home-tab-just" data-toggle="" href="index.html" role="tab" aria-controls="home-just"
+			aria-selected="true">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" id="profile-tab-just" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just"
+			aria-selected="false">My Account</a>
+		</li>
+		</ul>	
+		<!-- nav end -->
+
+<!--Main Layout-->
+<main class="mt-5 pt-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-12" >
+				<div class="card-wrapper" style="margin-bottom: 200px">
+					<div class="card" class="mb-5">
+						<div class="card-header mb-2">
+							<h4 class="white-text">BEST SELLING FOODS</h4>
+						</div>
+						<div class="card-content">
+							<!-- eto yung i loloop -->
+							<div class="card mb-2" style="margin-right: 5% !important; margin-left: 5% !important;">
+								<div class="card-content">
+									<div class="row">
+										<div class="col-12">
+											<div class="row">
+												<div class="col-4">
+													<img src="../images/sisigsilog.jpg" style="position: absolute; width: 100% !important; height: 100% !important">
+												</div>
+												<div class="col-8">
+													<label class="orange-text ml-3">SISIG SILOG</label><br>
+													<label class="ml-3">20 PESOS</label><br>
+													<label class="ml-3">SISIG SILOG</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- eto yung i loloop -->
+							<!-- eto yung i loloop -->
+							<div class="card mb-2" style="margin-right: 5% !important; margin-left: 5% !important;">
+								<div class="card-content">
+									<div class="row">
+										<div class="col-12">
+											<div class="row">
+												<div class="col-4">
+													<img src="../images/sisigsilog.jpg" style="position: absolute; width: 100% !important; height: 100% !important">
+												</div>
+												<div class="col-8">
+													<label class="orange-text ml-3">SISIG SILOG</label><br>
+													<label class="ml-3">20 PESOS</label><br>
+													<label class="ml-3">SISIG SILOG</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- eto yung i loloop -->
+							<!-- eto yung i loloop -->
+							<div class="card mb-2" style="margin-right: 5% !important; margin-left: 5% !important;">
+								<div class="card-content">
+									<div class="row">
+										<div class="col-12">
+											<div class="row">
+												<div class="col-4">
+													<img src="../images/sisigsilog.jpg" style="position: absolute; width: 100% !important; height: 100% !important">
+												</div>
+												<div class="col-8">
+													<label class="orange-text ml-3">SISIG SILOG</label><br>
+													<label class="ml-3">20 PESOS</label><br>
+													<label class="ml-3">SISIG SILOG</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- eto yung i loloop -->
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>
+<!--Main Layout-->
+
+</body>
+
+<script type="text/javascript" src="../mdb/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../mdb/popper.min.js"></script>
+<script type="text/javascript" src="../mdb/mdb.min.js"></script>
+<script type="text/javascript" src="../mdb/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/mdb.js"></script>
+<script type="text/javascript" src="../js/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/authentication.js"></script>
+<script type="text/javascript" src="../js/topseller.js"></script>
+
+</html>
